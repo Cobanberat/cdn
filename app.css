@@ -1,10 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* button */
+.button{
+    width: 100px;
+    height: 40px;
+}
 
+/* button dark */
+.button-dark {
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    font-family:Arial, Helvetica, sans-serif;
+    transition: 0.9s;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(39, 39, 39));
+    background-size: 200% 100%; 
+    background-position: 0 0; 
+}
+
+.button-dark:hover {
+    transition:1s ease; 
+    background-position: -100% 0; 
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3), 1px 5px 20px rgba(0, 0, 0, 0.2);
+}
+.button-dark:active {
+    background-color: rgb(44, 44, 44); 
+    background-image: none; 
+    color: #fff;
+    border: 1px solid rgb(0, 0, 0);
+}
+  
+/* alert */
 .alert {
+    visibility: hidden;
     position: fixed;
-
     padding: 15px 20px;
     border-radius: 8px;
     color: #fff;
@@ -38,14 +68,7 @@
 .alert-error {
     background-image: linear-gradient(to right, #dd1d0c, #b71c1c);
 }
-.alert-top-left{
-    top: 20px;
-    left: 20px;
-}
-.alert-top-right{
-    top: 20px;
-    left: 20px;
-}
+
 .alert-bottom-left{
     bottom: 20px;
     left: 20px;
@@ -54,6 +77,14 @@
     bottom: 20px;
     right: 20px;
 }
+.alert-right{
+ top: 20px;
+ right: 20px;
+}
+.alert-left{
+    top: 20px;
+    left: 20px;
+   }
 
 .alert::after {
     content: "";
@@ -79,3 +110,4 @@
         width: 0;
     }
 }
+

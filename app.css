@@ -4,8 +4,7 @@
 
 .alert {
     position: fixed;
-    top: 20px;
-    right: 20px;
+
     padding: 15px 20px;
     border-radius: 8px;
     color: #fff;
@@ -21,7 +20,6 @@
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3), 0px 6px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Fade-out animasyonu */
 @keyframes fadeOut {
     0% {
         opacity: 1;
@@ -33,16 +31,30 @@
     }
 }
 
-/* Başarı ve hata durumları için renkler */
 .alert-success {
-    background-image: linear-gradient(to right, rgb(133, 252, 97), rgb(99, 253, 38));
+    background-image: linear-gradient(to right, rgb(90, 252, 41), rgb(71, 250, 0));
 }
 
 .alert-error {
     background-image: linear-gradient(to right, #dd1d0c, #b71c1c);
 }
+.alert-top-left{
+    top: 20px;
+    left: 20px;
+}
+.alert-top-right{
+    top: 20px;
+    left: 20px;
+}
+.alert-bottom-left{
+    bottom: 20px;
+    left: 20px;
+}
+.alert-bottom-right{
+    bottom: 20px;
+    right: 20px;
+}
 
-/* Altta hareket eden iki renkli çizgi */
 .alert::after {
     content: "";
     display: block;
@@ -55,12 +67,10 @@
     animation: progressBar 2s linear forwards;
 }
 
-/* Hover durumunda animasyon durur */
 .alert:hover::after {
     animation-play-state: paused;
 }
 
-/* Çizginin sağa doğru dolma animasyonu */
 @keyframes progressBar {
     from {
         width: 100%;

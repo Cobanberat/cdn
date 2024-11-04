@@ -17,10 +17,11 @@
     line-height: 1.4;
     font-family: 'Helvetica Neue', sans-serif;
     transition: opacity 0.5s ease, visibility 0.5s ease;
-    animation: fadeOut 4s forwards;
-    box-shadow: 20px 30px 50px rgba(0, 0, 0, 0.3), 6px 6px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeOut 3s forwards;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3), 0px 6px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Fade-out animasyonu */
 @keyframes fadeOut {
     0% {
         opacity: 1;
@@ -32,21 +33,16 @@
     }
 }
 
-/* Alert'e fareyle gelindiğinde animasyon duraklatılır */
-.alert:hover {
-    animation-play-state: paused;
-}
-
 /* Başarı ve hata durumları için renkler */
 .alert-success {
-    background-image: linear-gradient(to right, rgb(125, 248, 87), rgb(91, 252, 27));
+    background-image: linear-gradient(to right, rgb(133, 252, 97), rgb(99, 253, 38));
 }
 
 .alert-error {
-    background-image: linear-gradient(to right, rgb(252, 97, 97), rgb(253, 38, 38));
+    background-image: linear-gradient(to right, #dd1d0c, #b71c1c);
 }
 
-/* Altta hareket eden çizgi, iki renkli geçişli */
+/* Altta hareket eden iki renkli çizgi */
 .alert::after {
     content: "";
     display: block;
@@ -59,7 +55,7 @@
     animation: progressBar 2s linear forwards;
 }
 
-/* Hover durumunda çizgi animasyonunu durdurma */
+/* Hover durumunda animasyon durur */
 .alert:hover::after {
     animation-play-state: paused;
 }

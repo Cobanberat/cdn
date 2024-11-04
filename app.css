@@ -26,9 +26,9 @@
 }
 .button-dark:active {
     background-color: rgb(44, 44, 44); 
+    transition:0s ease; 
     background-image: none; 
     color: #fff;
-    border: 1px solid rgb(0, 0, 0);
 }
   
 /* alert */
@@ -110,5 +110,3 @@
         width: 0;
     }
 }
-
- 
